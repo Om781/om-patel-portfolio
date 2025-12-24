@@ -1,127 +1,163 @@
 @import "../../_globalColor";
 
-.main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 4rem;
+/* Hireable Badge */
+
+.hireable-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.15) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 16px;
+  animation: fadeInDown 0.6s ease-out;
 }
+
+.hireable-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode hireable badge */
+.dark-mode .hireable-badge,
+.greet-main.dark-mode .hireable-badge {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.2) 100%);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.greeting-main > * {
+  flex: 1;
+}
+
+/* Text */
+
+.greeting-text {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $textColor !important;
+}
+
+.greeting-text-p {
+  margin-top: 1rem;
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: $subTitle;
 }
 
 .subTitle {
   color: $subTitle !important;
 }
 
-.greeting-main {
-  display: flex;
-}
-
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.empty-div {
-  margin-bottom: 40px;
-}
+/* Buttons */
 
 .button-greeting-div {
+  margin-top: 1.5rem;
   display: flex;
-  margin-top: 40px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
+
 .download-link-button {
   text-decoration: none;
 }
 
-.greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
-}
+/* Image */
 
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.greeting-image-div > img {
+.greeting-image-div img {
   max-width: 100%;
   height: auto;
 }
 
+/* Emoji Animation */
+
 .wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
+  animation: wave 1.8s infinite;
   display: inline-block;
   transform-origin: 70% 70%;
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
-}
+/* Responsive */
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
   .greeting-main {
-    display: block;
+    flex-direction: column;
+    text-align: center;
   }
-  .greeting-image-div {
-    height: 256px;
-  }
-}
 
-@media (max-width: 320px) {
-  .main {
-    width: auto;
+  .hireable-badge {
+    margin: 0 auto 16px auto;
+  }
+
+  .greeting-text {
+    font-size: 2.2rem;
+  }
+
+  .greeting-text-p {
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+  }
+
+  .greeting-image-div {
+    max-width: 280px;
+    margin: 0 auto;
   }
 }

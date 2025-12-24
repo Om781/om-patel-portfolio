@@ -1,82 +1,127 @@
-import React, {useState, createRef} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
-export default function ExperienceCard({cardInfo, isDark}) {
-  const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+export default function ExperienceCard({ cardInfo, isDark, index }) {
+  const imgRef = useRef(null);
+  const cardRef = useRef(null);
 
-  function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
-  }
+  const [accentColor, setAccentColor] = useState("#645beb");
+  const [imgError, setImgError] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
-  }
+  // Scroll reveal
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setVisible(true),
+      { threshold: 0.2 }
+    );
 
-  const GetDescBullets = ({descBullets, isDark}) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
-      : null;
+    if (cardRef.current) observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Extract dominant logo color
+  const onImageLoad = () => {
+    try {
+      const thief = new ColorThief();
+      const [r, g, b] = thief.getColor(imgRef.current);
+      setAccentColor(`rgb(${r}, ${g}, ${b})`);
+    } catch {
+      console.warn("Color extraction failed");
+    }
   };
 
+  // Initials fallback
+  const initials = cardInfo.company
+    .split(" ")
+    .map(w => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div style={{background: rgb(colorArrays)}} className="experience-banner">
-        <div className="experience-blurred_div"></div>
-        <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+    <div className="timeline-item">
+      {/* Timeline line */}
+      <div
+        className="timeline-line"
+        style={{ backgroundColor: accentColor }}
+      />
+
+      {/* Timeline dot */}
+      <div
+        className="timeline-dot"
+        style={{ backgroundColor: accentColor }}
+      />
+
+      <div
+        ref={cardRef}
+        className={`experience-card ${visible ? "visible" : ""} ${
+          isDark ? "experience-card-dark" : ""
+        }`}
+        style={{ borderLeft: `4px solid ${accentColor}` }}
+      >
+        {/* Header */}
+        <div className="experience-header">
+          <a
+            href={cardInfo.companyUrl || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="logo-link"
+          >
+            {!imgError ? (
+              <img
+                ref={imgRef}
+                src={cardInfo.companylogo}
+                alt={cardInfo.company}
+                className="experience-logo"
+                crossOrigin="anonymous"
+                onLoad={onImageLoad}
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <div
+                className="experience-logo fallback-logo"
+                style={{ backgroundColor: accentColor }}
+              >
+                {initials}
+              </div>
+            )}
+          </a>
+
+          <div>
+            <h3 className={isDark ? "dark-mode-text" : ""}>
+              {cardInfo.role}
+            </h3>
+            <p className="experience-company">{cardInfo.company}</p>
+            <span className="experience-date">{cardInfo.date}</span>
+          </div>
         </div>
 
-        <img
-          crossOrigin={"anonymous"}
-          ref={imgRef}
-          className="experience-roundedimg"
-          src={cardInfo.companylogo}
-          alt={cardInfo.company}
-          onLoad={() => getColorArrays()}
-        />
-      </div>
-      <div className="experience-text-details">
-        <h5
-          className={
-            isDark
-              ? "experience-text-role dark-mode-text"
-              : "experience-text-role"
-          }
-        >
-          {cardInfo.role}
-        </h5>
-        <h5
-          className={
-            isDark
-              ? "experience-text-date dark-mode-text"
-              : "experience-text-date"
-          }
-        >
-          {cardInfo.date}
-        </h5>
-        <p
-          className={
-            isDark
-              ? "subTitle experience-text-desc dark-mode-text"
-              : "subTitle experience-text-desc"
-          }
-        >
+        {/* Description */}
+        <p className={`experience-desc ${isDark ? "dark-mode-text" : ""}`}>
           {cardInfo.desc}
         </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
+
+        {/* KPI Badges */}
+        {cardInfo.kpis && (
+          <div className="kpi-container">
+            {cardInfo.kpis.map((kpi, i) => (
+              <span
+                key={i}
+                className="kpi-badge"
+                style={{ backgroundColor: accentColor }}
+              >
+                {kpi}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <ul className="experience-bullets">
+          {cardInfo.descBullets?.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       </div>
     </div>
