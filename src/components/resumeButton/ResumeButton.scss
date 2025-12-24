@@ -1,0 +1,266 @@
+@import "../../_globalColor";
+
+// Shared styles for both variants
+.resume-btn-primary,
+.resume-btn-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.download-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+// ================================
+// PRIMARY VARIANT (Main Button)
+// ================================
+.resume-btn-primary {
+  background-color: $buttonColor;
+  border: solid 1px $buttonColor;
+  color: $textColorDark;
+  font-weight: 700;
+  padding: 13px 18px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 20px;
+
+  .btn-text {
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    transition: width 0.8s ease;
+  }
+
+  .btn-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $buttonHover;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+
+    .download-icon {
+      animation: bounce 0.5s ease infinite;
+    }
+  }
+
+  // Downloading state
+  &.downloading {
+    pointer-events: none;
+
+    .download-icon {
+      animation: downloadPulse 0.8s ease infinite;
+    }
+
+    .btn-progress {
+      width: 100%;
+    }
+
+    .btn-ripple {
+      animation: ripple 0.8s ease-out forwards;
+    }
+  }
+
+  // Success state
+  &.success {
+    background-color: #10b981;
+    border-color: #10b981;
+
+    .download-icon {
+      animation: successCheck 0.5s ease forwards;
+    }
+  }
+}
+
+// ================================
+// NAV VARIANT (Header Button)
+// ================================
+.resume-btn-nav {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: $buttonColor;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  .download-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .btn-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    border-radius: 0 0 6px 6px;
+    transition: width 0.8s ease;
+  }
+
+  &:hover {
+    background-color: $buttonHover;
+    transform: translateY(-1px);
+
+    .download-icon {
+      animation: bounce 0.5s ease infinite;
+    }
+  }
+
+  // Downloading state
+  &.downloading {
+    .download-icon {
+      animation: downloadPulse 0.8s ease infinite;
+    }
+
+    .btn-progress {
+      width: 100%;
+    }
+  }
+
+  // Success state
+  &.success {
+    background-color: #10b981;
+
+    .download-icon {
+      animation: successCheck 0.5s ease forwards;
+    }
+  }
+
+  // Dark mode
+  &.dark {
+    &:hover {
+      background-color: $buttonHover;
+    }
+  }
+}
+
+// ================================
+// ANIMATIONS
+// ================================
+
+// Bounce animation for hover
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+// Download pulse animation
+@keyframes downloadPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(4px) scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+// Ripple effect animation
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+// Success checkmark animation
+@keyframes successCheck {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+// ================================
+// RESPONSIVE
+// ================================
+@media (max-width: 768px) {
+  .resume-btn-primary {
+    font-size: 0.938rem;
+    padding: 12px 14px;
+    margin-right: 0;
+
+    .download-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .resume-btn-nav {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+
+    .download-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .resume-btn-primary {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+
+    .download-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Image Generator - Om Patel Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      padding: 20px;
+    }
+    .instructions {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: system-ui, sans-serif;
+    }
+    .instructions h2 { margin-bottom: 10px; }
+    .instructions p { color: #a5b4fc; font-size: 14px; }
+
+    /* OG Image Container - 1200x630 */
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      position: relative;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Decorative elements */
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: #4f46e5;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    .og-image::after {
+      content: '';
+      position: absolute;
+      bottom: -75px;
+      left: -75px;
+      width: 300px;
+      height: 300px;
+      background: #818cf8;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+
+    /* Grid overlay */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 60px 90px;
+      height: 100%;
+      display: flex;
+    }
+
+    .left-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .accent-bar {
+      position: absolute;
+      left: 60px;
+      top: 180px;
+      width: 6px;
+      height: 270px;
+      background: linear-gradient(180deg, #818cf8, #6366f1);
+      border-radius: 3px;
+    }
+
+    .label {
+      font-size: 28px;
+      color: #a5b4fc;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 64px;
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      font-size: 32px;
+      color: #c7d2fe;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .tech-stack {
+      font-size: 22px;
+      color: #a5b4fc;
+      margin-bottom: 40px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 10px;
+    }
+
+    .badge {
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .badge.primary {
+      background: #4f46e5;
+      color: #fff;
+    }
+
+    .badge.outline {
+      border: 2px solid #6366f1;
+      color: #a5b4fc;
+    }
+
+    /* Code block */
+    .code-block {
+      width: 380px;
+      height: 270px;
+      background: rgba(15, 15, 35, 0.6);
+      border-radius: 12px;
+      padding: 20px;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 14px;
+      line-height: 1.8;
+      align-self: center;
+    }
+
+    .code-block .comment { color: #6366f1; }
+    .code-block .keyword { color: #818cf8; }
+    .code-block .property { color: #a5b4fc; }
+    .code-block .string { color: #34d399; }
+    .code-block .text { color: #ffffff; }
+
+    /* Footer URL */
+    .footer-url {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 18px;
+      color: #6366f1;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="instructions">
+    <h2>OG Image Generator</h2>
+    <p>Take a screenshot of the box below at exactly 1200x630 pixels, or use browser DevTools to capture.</p>
+    <p>Save as <strong>og-image.png</strong> in the public folder.</p>
+  </div>
+
+  <div class="og-image">
+    <div class="grid-overlay"></div>
+    <div class="accent-bar"></div>
+
+    <div class="content">
+      <div class="left-section">
+        <div class="label">PORTFOLIO</div>
+        <div class="name">Om Patel</div>
+        <div class="title">Senior Software Engineer</div>
+        <div class="tech-stack">Java | Spring Boot | AWS | Kubernetes | Microservices</div>
+        <div class="badges">
+          <span class="badge primary">3.6+ Years</span>
+          <span class="badge outline">Backend</span>
+          <span class="badge outline">Cloud</span>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div><span class="comment">// Senior Software Engineer</span></div>
+        <div><span class="keyword">const</span> <span class="text">skills = {</span></div>
+        <div>&nbsp;&nbsp;<span class="property">backend:</span> <span class="string">"Java, Spring Boot"</span><span class="text">,</span></div>
+        <div>&nbsp;&nbsp;<span class="property">cloud:</span> <span class="string">"AWS, Kubernetes"</span><span class="text">,</span></div>
+        <div>&nbsp;&nbsp;<span class="property">database:</span> <span class="string">"Redis, PostgreSQL"</span><span class="text">,</span></div>
+        <div>&nbsp;&nbsp;<span class="property">security:</span> <span class="string">"Keycloak, OAuth2"</span></div>
+        <div><span class="text">};</span></div>
+        <div><span class="comment">// Building scalable systems</span></div>
+      </div>
+    </div>
+
+    <div class="footer-url">om781.github.io/om-patel-portfolio</div>
+  </div>
+</body>
+</html>

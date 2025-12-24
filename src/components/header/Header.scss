@@ -131,17 +131,10 @@
   top: -5px;
 }
 
-.resume-btn {
-  padding: 6px 14px !important;
-  border-radius: 6px;
-  background-color: $buttonColor;
-  color: #ffffff !important;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
-.resume-btn:hover {
-  background-color: $buttonHover;
+.resume-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
 }
 
 .dark-menu li a:hover {

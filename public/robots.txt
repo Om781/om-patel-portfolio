@@ -1,2 +1,11 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Om Patel Portfolio
+# https://om781.github.io/om-patel-portfolio/
+
 User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://om781.github.io/om-patel-portfolio/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

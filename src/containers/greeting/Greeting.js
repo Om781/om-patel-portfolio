@@ -6,6 +6,7 @@ import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
+import ResumeButton from "../../components/resumeButton/ResumeButton";
 import {illustration, greeting, isHireable} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -46,14 +47,11 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact Me" href="#contact" />
-                <a
-                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="download-link-button"
-                >
-                  <Button text="View Resume" href={`${process.env.PUBLIC_URL}/resume.pdf`} />
-                </a>
+                <ResumeButton
+                  variant="primary"
+                  source="greeting"
+                  text="View Resume"
+                />
               </div>
             </div>
           </div>

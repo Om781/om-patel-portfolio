@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import ResumeButton from "../resumeButton/ResumeButton";
 import StyleContext from "../../contexts/StyleContext";
 import { greeting, workExperiences, skillsSection } from "../../portfolio";
 
@@ -13,7 +14,7 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <a href={process.env.PUBLIC_URL + "/"} className="logo">
           <span className="grey-color">&lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -46,15 +47,8 @@ function Header() {
           </li>
 
           {/* Resume Button */}
-          <li>
-            <a
-              href={`${process.env.PUBLIC_URL}/resume.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="resume-btn"
-            >
-              Resume
-            </a>
+          <li className="resume-nav-item">
+            <ResumeButton variant="nav" source="header" text="Resume" />
           </li>
 
           {/* Dark mode toggle */}
