@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/om-patel-portfolio/static/css/main.7355c642.css",
+    "main.js": "/om-patel-portfolio/static/js/main.1daa59fb.js",
+    "static/css/64.160cdf21.chunk.css": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css",
+    "static/js/64.4e212b03.chunk.js": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js",
+    "static/css/769.c1b8551f.chunk.css": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css",
+    "static/js/769.828f1c7a.chunk.js": "/om-patel-portfolio/static/js/769.828f1c7a.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/om-patel-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Agustina.woff": "/om-patel-portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/manOnTable.svg": "/om-patel-portfolio/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/contactMailDark.svg": "/om-patel-portfolio/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/developerActivity.svg": "/om-patel-portfolio/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
+    "static/media/skill.svg": "/om-patel-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "index.html": "/om-patel-portfolio/index.html",
+    "static/media/talksCardBack.svg": "/om-patel-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.7355c642.css.map": "/om-patel-portfolio/static/css/main.7355c642.css.map",
+    "main.1daa59fb.js.map": "/om-patel-portfolio/static/js/main.1daa59fb.js.map",
+    "64.160cdf21.chunk.css.map": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css.map",
+    "64.4e212b03.chunk.js.map": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js.map",
+    "769.c1b8551f.chunk.css.map": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css.map",
+    "769.828f1c7a.chunk.js.map": "/om-patel-portfolio/static/js/769.828f1c7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7355c642.css",
+    "static/js/main.1daa59fb.js"
+  ]
+}
