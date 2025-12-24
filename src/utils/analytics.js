@@ -39,12 +39,14 @@ export const trackResumeClick = (source = "unknown") => {
       console.log("📊 Resume Click Tracked:", event);
     }
 
-    // If Google Analytics is available, send event
+    // Send to Google Analytics 4
     if (typeof window.gtag === "function") {
-      window.gtag("event", "resume_download", {
+      window.gtag("event", "resume_click", {
         event_category: "engagement",
         event_label: source,
-        value: 1,
+        button_location: source,
+        click_timestamp: event.timestamp,
+        referrer: event.referrer,
       });
     }
 

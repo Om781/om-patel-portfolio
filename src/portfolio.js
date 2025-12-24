@@ -5,7 +5,7 @@ import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 const splashScreen = {
-  enabled: false,
+  enabled: true,
   animation: splashAnimation,
   duration: 2000
 };
@@ -31,6 +31,7 @@ const socialMediaLinks = {
   github: "https://github.com/Om781",
   linkedin: "https://www.linkedin.com/in/om-patel-7924a218a/",
   gmail: "reach.ompatel@gmail.com",
+  twitter: "https://twitter.com/ompatel781",
   display: true
 };
 
