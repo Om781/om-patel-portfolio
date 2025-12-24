@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/om-patel-portfolio/static/css/main.7355c642.css",
-    "main.js": "/om-patel-portfolio/static/js/main.091e90e5.js",
+    "main.css": "/om-patel-portfolio/static/css/main.72e60560.css",
+    "main.js": "/om-patel-portfolio/static/js/main.918ac555.js",
     "static/css/64.160cdf21.chunk.css": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css",
     "static/js/64.4e212b03.chunk.js": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js",
     "static/css/769.c1b8551f.chunk.css": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css",
@@ -14,15 +14,15 @@
     "static/media/skill.svg": "/om-patel-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/om-patel-portfolio/index.html",
     "static/media/talksCardBack.svg": "/om-patel-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.7355c642.css.map": "/om-patel-portfolio/static/css/main.7355c642.css.map",
-    "main.091e90e5.js.map": "/om-patel-portfolio/static/js/main.091e90e5.js.map",
+    "main.72e60560.css.map": "/om-patel-portfolio/static/css/main.72e60560.css.map",
+    "main.918ac555.js.map": "/om-patel-portfolio/static/js/main.918ac555.js.map",
     "64.160cdf21.chunk.css.map": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css.map",
     "64.4e212b03.chunk.js.map": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js.map",
     "769.c1b8551f.chunk.css.map": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css.map",
     "769.828f1c7a.chunk.js.map": "/om-patel-portfolio/static/js/769.828f1c7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7355c642.css",
-    "static/js/main.091e90e5.js"
+    "static/css/main.72e60560.css",
+    "static/js/main.918ac555.js"
   ]
 }
