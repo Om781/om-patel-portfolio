@@ -47,12 +47,12 @@ export default function Greeting() {
               <div className="button-greeting-div">
                 <Button text="Contact Me" href="#contact" />
                 <a
-                  href="/resume.pdf"
+                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
                   target="_blank"
                   rel="noreferrer"
                   className="download-link-button"
                 >
-                  <Button text="View Resume" href="/resume.pdf" />
+                  <Button text="View Resume" href={`${process.env.PUBLIC_URL}/resume.pdf`} />
                 </a>
               </div>
             </div>

@@ -22,7 +22,7 @@ const greeting = {
   subTitle: emoji(
     "Senior Software Engineer 🚀 with 3.6+ years of experience in building scalable, secure, and cloud-native backend systems using Java, Spring Boot, AWS, Kubernetes, Redis, and Keycloak."
   ),
-  resumeLink: "/resume.pdf",
+  resumeLink: process.env.PUBLIC_URL + "/resume.pdf",
   displayGreeting: true
 };
 
@@ -91,7 +91,7 @@ const workExperiences = {
     {
       role: "Senior Software Developer L1",
       company: "Mantra Smart Identity",
-      companylogo: "/images/companies/mantra.png",
+      companylogo: process.env.PUBLIC_URL + "/images/companies/mantra.png",
       companyUrl: "https://mantraidentity.com/",
       date: "Nov 2024 – Present",
       desc:
@@ -109,7 +109,7 @@ const workExperiences = {
     {
       role: "Software Engineer",
       company: "Raapyd",
-      companylogo: "/images/companies/raapyd.jpg",
+      companylogo: process.env.PUBLIC_URL + "/images/companies/raapyd.jpg",
       companyUrl: "https://www.raapyd.com/",
       date: "Feb 2024 – Sept 2025",
       kpis: [
@@ -128,7 +128,7 @@ const workExperiences = {
     {
       role: "Software Engineer",
       company: "Aivid Techvision Pvt. Ltd.",
-      companylogo: "/images/companies/aivid.jpg",
+      companylogo: process.env.PUBLIC_URL + "/images/companies/aivid.jpg",
       companyUrl: "https://aivid.ai/",
       date: "Aug 2022 – Feb 2024",
       kpis: [
