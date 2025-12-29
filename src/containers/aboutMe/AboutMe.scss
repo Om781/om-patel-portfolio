@@ -1,0 +1,315 @@
+@import "../../_globalColor";
+
+.about-me-main {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about-me-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  padding: 0 40px;
+  align-items: start;
+}
+
+// Left Side - Content
+.about-me-content {
+  .about-me-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $titleColor;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, $buttonColor, #818cf8);
+      border-radius: 2px;
+    }
+
+    &.dark-mode {
+      color: $textColorDark;
+    }
+  }
+
+  .about-me-subtitle {
+    font-size: 1.1rem;
+    color: $subTitle;
+    margin-bottom: 24px;
+    margin-top: 20px;
+
+    &.dark-mode {
+      color: #9ca3af;
+    }
+  }
+
+  .about-me-story {
+    margin-bottom: 32px;
+
+    .story-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: $textColor;
+      margin-bottom: 16px;
+
+      &.dark-mode {
+        color: #d1d5db;
+      }
+    }
+  }
+}
+
+// What I Bring Section
+.what-i-bring {
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $titleColor;
+    margin-bottom: 16px;
+
+    &.dark-mode {
+      color: $textColorDark;
+    }
+  }
+
+  .bring-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: $lightBackground3;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateX(5px);
+        background: rgba(79, 70, 229, 0.08);
+      }
+
+      &.dark-mode {
+        background: rgba(255, 255, 255, 0.05);
+
+        &:hover {
+          background: rgba(79, 70, 229, 0.15);
+        }
+      }
+
+      .bring-icon {
+        font-size: 1.2rem;
+      }
+
+      .bring-text {
+        font-size: 0.95rem;
+        color: $textColor;
+        font-weight: 500;
+      }
+
+      &.dark-mode .bring-text {
+        color: #d1d5db;
+      }
+    }
+  }
+}
+
+// Right Side - Highlights
+.about-me-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, $lightBackground1 0%, $lightBackground3 100%);
+  border: 1px solid $lightBorder1;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.15);
+    border-color: $buttonColor;
+  }
+
+  &.dark-mode {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      border-color: $buttonColor;
+      box-shadow: 0 12px 24px rgba(79, 70, 229, 0.25);
+    }
+  }
+
+  .highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .highlight-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $buttonColor;
+    line-height: 1.2;
+  }
+
+  .highlight-label {
+    font-size: 0.9rem;
+    color: $subTitle;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  &.dark-mode .highlight-label {
+    color: #9ca3af;
+  }
+}
+
+// Quote Card
+.quote-card {
+  background: linear-gradient(135deg, $buttonColor 0%, #6366f1 100%);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  }
+
+  .quote-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Georgia, serif;
+    line-height: 0.5;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .quote-text {
+    color: white;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  &.dark-mode {
+    background: linear-gradient(135deg, $buttonColor 0%, #4338ca 100%);
+  }
+}
+
+// Animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .about-me-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .quote-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-main {
+    padding: 60px 0;
+  }
+
+  .about-me-container {
+    padding: 0 20px;
+  }
+
+  .about-me-content {
+    .about-me-title {
+      font-size: 2rem;
+    }
+
+    .about-me-subtitle {
+      font-size: 1rem;
+    }
+
+    .story-text {
+      font-size: 1rem;
+    }
+  }
+
+  .what-i-bring .bring-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-content .about-me-title {
+    font-size: 1.75rem;
+  }
+
+  .about-me-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-card {
+    grid-column: span 1;
+  }
+
+  .highlight-card {
+    padding: 20px;
+
+    .highlight-value {
+      font-size: 1.75rem;
+    }
+  }
+}

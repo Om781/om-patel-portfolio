@@ -26,6 +26,32 @@ const greeting = {
   displayGreeting: true
 };
 
+// About Me Section
+const aboutMeSection = {
+  display: true,
+  title: "About Me",
+  subtitle: "The person behind the code",
+  story: [
+    "I'm a backend engineer who believes that great software is invisible — it just works, scales, and keeps data secure. My journey into software engineering started with a curiosity about how systems communicate and authenticate users securely.",
+    "Over 3.6+ years, I've specialized in building identity and security systems — from biometric authentication platforms to enterprise SSO migrations. There's something deeply satisfying about architecting systems that protect millions of digital identities while remaining lightning-fast."
+  ],
+  whatIBring: [
+    {icon: "🔐", text: "Security-First Mindset"},
+    {icon: "📈", text: "Performance Obsessed"},
+    {icon: "🏗️", text: "Clean Architecture"},
+    {icon: "🤝", text: "Team Collaboration"},
+    {icon: "📚", text: "Continuous Learner"},
+    {icon: "🎯", text: "Result-Driven"}
+  ],
+  highlights: [
+    {icon: "⚡", value: "25%", label: "API Performance Boost"},
+    {icon: "✅", value: "94%", label: "Test Coverage Achieved"},
+    {icon: "🚀", value: "0", label: "Downtime Migrations"},
+    {icon: "🔐", value: "3+", label: "Identity Systems Built"}
+  ],
+  philosophy: "I don't just write code that works — I build systems that scale, secure, and stand the test of production traffic."
+};
+
 // Social Media
 const socialMediaLinks = {
   github: "https://github.com/Om781",
@@ -148,8 +174,36 @@ const workExperiences = {
 };
 
 // Disabled Sections
-const achievementSection = { display: false };
-const blogSection = { display: false };
+const achievementSection = {display: false};
+
+// Blog Section
+const blogSection = {
+  display: false,
+  title: "Technical Blog",
+  subtitle:
+    "Sharing insights on backend engineering, security, and building scalable systems",
+  displayMediumBlogs: "false",
+  blogs: [
+    {
+      url: "https://dev.to/",
+      title: "Zero-Downtime SSO Migration: A Practical Guide",
+      description:
+        "How I migrated enterprise authentication to Azure AD SSO without any service interruption - lessons learned and best practices."
+    },
+    {
+      url: "https://dev.to/",
+      title: "Redis Caching Patterns That Boosted Our API by 25%",
+      description:
+        "Practical caching strategies for Spring Boot applications - from cache-aside to write-through patterns with real performance metrics."
+    },
+    {
+      url: "https://dev.to/",
+      title: "Achieving 94% Test Coverage in Spring Boot Microservices",
+      description:
+        "My testing strategy using JUnit 5 and Mockito - unit tests, integration tests, and the patterns that made high coverage achievable."
+    }
+  ]
+};
 const talkSection = { display: false };
 const podcastSection = { display: false };
 const twitterDetails = { display: false };
@@ -172,6 +226,7 @@ const isHireable = false;
 export {
   illustration,
   greeting,
+  aboutMeSection,
   socialMediaLinks,
   splashScreen,
   skillsSection,

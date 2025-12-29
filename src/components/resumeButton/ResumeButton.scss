@@ -69,12 +69,14 @@
   }
 
   &:hover {
-    background-color: $buttonHover;
+    background-color: $darkBoxShadow2;
+    color: $buttonColor;
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s ease 0s;
 
     .download-icon {
       animation: bounce 0.5s ease infinite;
+      stroke: $buttonColor;
     }
   }
 

@@ -4,12 +4,14 @@ import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import ResumeButton from "../resumeButton/ResumeButton";
 import StyleContext from "../../contexts/StyleContext";
-import { greeting, workExperiences, skillsSection } from "../../portfolio";
+import { greeting, workExperiences, skillsSection, aboutMeSection, blogSection } from "../../portfolio";
 
 function Header() {
   const { isDark } = useContext(StyleContext);
   const viewExperience = workExperiences.display;
   const viewSkills = skillsSection.display;
+  const viewAbout = aboutMeSection.display;
+  const viewBlog = blogSection.display;
 
   return (
     <Headroom>
@@ -26,6 +28,12 @@ function Header() {
         </label>
 
         <ul className={isDark ? "dark-menu menu" : "menu"}>
+          {viewAbout && (
+            <li>
+              <a href="#about">About</a>
+            </li>
+          )}
+
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>
@@ -38,9 +46,11 @@ function Header() {
             </li>
           )}
 
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
+          {viewBlog && (
+            <li>
+              <a href="#blogs">Blog</a>
+            </li>
+          )}
 
           <li>
             <a href="#contact">Contact</a>
