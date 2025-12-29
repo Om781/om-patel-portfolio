@@ -7,7 +7,7 @@ import splashAnimation from "./assets/lottie/splashAnimation";
 const splashScreen = {
   enabled: true,
   animation: splashAnimation,
-  duration: 2000
+  duration: 1000
 };
 
 // Illustration
@@ -94,7 +94,7 @@ const workExperiences = {
       company: "Mantra Smart Identity",
       companylogo: process.env.PUBLIC_URL + "/images/companies/mantra.png",
       companyUrl: "https://mantraidentity.com/",
-      date: "Nov 2024 – Present",
+      date: "Nov 2025 – Present",
       desc:
         "Leading backend development for biometric and digital identity platforms.",
       kpis: [

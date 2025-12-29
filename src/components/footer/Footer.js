@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Footer.scss";
-import { Fade } from "react-reveal";
+import {Fade} from "../animations/Animations";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Footer() {
