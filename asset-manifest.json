@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/om-patel-portfolio/static/css/main.72e60560.css",
-    "main.js": "/om-patel-portfolio/static/js/main.ead8e7fe.js",
-    "static/css/64.160cdf21.chunk.css": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css",
-    "static/js/64.4e212b03.chunk.js": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js",
-    "static/css/769.c1b8551f.chunk.css": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css",
-    "static/js/769.828f1c7a.chunk.js": "/om-patel-portfolio/static/js/769.828f1c7a.chunk.js",
+    "main.css": "/om-patel-portfolio/static/css/main.e97db39d.css",
+    "main.js": "/om-patel-portfolio/static/js/main.ef563700.js",
+    "static/css/487.d45dd74a.chunk.css": "/om-patel-portfolio/static/css/487.d45dd74a.chunk.css",
+    "static/js/487.f6cfa0af.chunk.js": "/om-patel-portfolio/static/js/487.f6cfa0af.chunk.js",
+    "static/css/990.99ad1205.chunk.css": "/om-patel-portfolio/static/css/990.99ad1205.chunk.css",
+    "static/js/990.4294eaba.chunk.js": "/om-patel-portfolio/static/js/990.4294eaba.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/om-patel-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/om-patel-portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/manOnTable.svg": "/om-patel-portfolio/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
@@ -14,15 +14,15 @@
     "static/media/skill.svg": "/om-patel-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/om-patel-portfolio/index.html",
     "static/media/talksCardBack.svg": "/om-patel-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.72e60560.css.map": "/om-patel-portfolio/static/css/main.72e60560.css.map",
-    "main.ead8e7fe.js.map": "/om-patel-portfolio/static/js/main.ead8e7fe.js.map",
-    "64.160cdf21.chunk.css.map": "/om-patel-portfolio/static/css/64.160cdf21.chunk.css.map",
-    "64.4e212b03.chunk.js.map": "/om-patel-portfolio/static/js/64.4e212b03.chunk.js.map",
-    "769.c1b8551f.chunk.css.map": "/om-patel-portfolio/static/css/769.c1b8551f.chunk.css.map",
-    "769.828f1c7a.chunk.js.map": "/om-patel-portfolio/static/js/769.828f1c7a.chunk.js.map"
+    "main.e97db39d.css.map": "/om-patel-portfolio/static/css/main.e97db39d.css.map",
+    "main.ef563700.js.map": "/om-patel-portfolio/static/js/main.ef563700.js.map",
+    "487.d45dd74a.chunk.css.map": "/om-patel-portfolio/static/css/487.d45dd74a.chunk.css.map",
+    "487.f6cfa0af.chunk.js.map": "/om-patel-portfolio/static/js/487.f6cfa0af.chunk.js.map",
+    "990.99ad1205.chunk.css.map": "/om-patel-portfolio/static/css/990.99ad1205.chunk.css.map",
+    "990.4294eaba.chunk.js.map": "/om-patel-portfolio/static/js/990.4294eaba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72e60560.css",
-    "static/js/main.ead8e7fe.js"
+    "static/css/main.e97db39d.css",
+    "static/js/main.ef563700.js"
   ]
 }
