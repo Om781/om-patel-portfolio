@@ -1,26 +1,26 @@
 {
   "short_name": "Om Patel",
-  "name": "Om Patel | Senior Software Engineer",
-  "description": "Senior Software Engineer with 3.6+ years of experience in Java, Spring Boot, AWS, Kubernetes.",
+  "name": "Om Patel — Software Engineer",
+  "description": "Software Engineer building scalable, secure, cloud-native backend systems.",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/om-patel-portfolio/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/android-chrome-192x192.png?v8=qAJ44G5Bm7",
+      "src": "/om-patel-portfolio/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/android-chrome-384x384.png?v8=qAJ44G5Bm7",
+      "src": "/om-patel-portfolio/android-chrome-384x384.png",
       "type": "image/png",
       "sizes": "384x384"
     }
   ],
-  "start_url": ".",
+  "start_url": "/om-patel-portfolio/",
   "display": "standalone",
-  "theme_color": "#4f46e5",
-  "background_color": "#ffffff"
+  "theme_color": "#070A0F",
+  "background_color": "#070A0F"
 }
