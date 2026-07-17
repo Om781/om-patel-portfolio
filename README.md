@@ -1,107 +1,55 @@
-# Om Patel — Senior Software Engineer Portfolio 🚀
+# Om Patel — Portfolio
 
-Personal portfolio website showcasing my experience, skills, and projects as a **Senior Software Engineer** specializing in **Java, Spring Boot, Cloud, and Distributed Systems**.
+Personal portfolio of **Om Patel**, a **Software Engineer** with 3.7+ years building scalable, secure, cloud-native backend systems across manufacturing, telecom and digital-identity domains.
 
-🌐 **Live Portfolio:** https://<your-domain-or-github-pages-link>  
-📄 **Resume:** Available on the website
+A fully custom, from-scratch build — no template. Themed around a **"secure access"** concept (decrypt-text reveals, a biometric fingerprint scanner, a magnetic cursor, a scroll-drawn timeline and a drifting aurora background).
 
----
-
-## 👋 About Me
-
-I’m **Om Patel**, a backend-focused Software Engineer with **3.6+ years of experience** building scalable, secure, and cloud-native systems.
-
-**Core expertise:**
-- Java & Spring Boot
-- Microservices architecture
-- Authentication & Authorization (Keycloak, OAuth2, JWT, Azure AD)
-- AWS, Docker & Kubernetes
-- Redis, Kafka, MySQL, MongoDB
-- CI/CD with Jenkins
+🌐 **Live:** https://om781.github.io/om-patel-portfolio/
 
 ---
 
-## 🧠 Tech Stack
+## 🧱 Tech stack
 
-- **Frontend:** React
-- **Backend:** Java, Spring Boot
-- **Cloud & DevOps:** AWS, Docker, Kubernetes
-- **Databases:** MySQL, MongoDB, Redis
-- **Messaging:** Apache Kafka
-- **Auth & Security:** Keycloak, JWT, OAuth2, Azure AD
-- **CI/CD:** Jenkins
+- **Vite** + **React 18**
+- **Framer Motion** for animation
+- Plain modern **CSS** with a token-based design system
+- Deployed to **GitHub Pages** via GitHub Actions
 
----
+## 🎨 Design system
 
-## 💼 Work Experience
+| Token | Value |
+|---|---|
+| Base | Deep ink `#070A0F` |
+| Accents | Secure emerald `#00E5A0` · electric cyan `#22D3EE` · signal violet `#8B7CF6` |
+| Type | Space Grotesk (display) · Inter (body) · JetBrains Mono (mono) |
 
-### **Senior Software Developer L1**
-**Mantra Smart Identity**  
-🗓 Nov 2025 – Present
-- Leading backend development for biometric & digital identity platforms
-- Working on MOSIP identity workflows and secure authentication
-- Designing scalable Spring Boot services with clean architecture
+All content lives in a single file: [`src/data/content.js`](src/data/content.js). Edit it to update every section.
 
----
+## 📁 Structure
 
-### **Software Engineer**
-**Raapyd**  
-🗓 Feb 2024 – Sept 2025  
-🚀 **25% Faster APIs | Kubernetes Deployments**
-- Built Vendor Portal, CMMS, and E-Catalog platforms
-- Migrated authentication to Azure AD SSO with zero downtime
-- Improved API performance by 25% using DB tuning & Redis
-- Docker & Kubernetes based deployments
+```
+index.html            → app shell + SEO/meta + fonts
+src/
+  main.jsx            → entry
+  App.jsx             → composition + preloader gate
+  data/content.js     → ALL content (single source of truth)
+  styles/             → global tokens + per-section CSS
+  components/         → Cursor, DecryptText, Fingerprint, Reveal, MagneticButton, …
+  sections/           → Preloader, Nav, Hero, About, Expertise, Experience, Work, Contact, Footer
+```
 
----
+## 🛠 Run locally
 
-### **Software Engineer**
-**Aivid Techvision Pvt. Ltd.**  
-🗓 Aug 2022 – Feb 2024  
-✅ **94% Test Coverage | JWT Security**
-- Developed B2B CPQ portal for Tech Mahindra
-- Implemented Kafka for event-driven architecture
-- Achieved 94%+ test coverage using JUnit & Mockito
-- Secured APIs using JWT authentication
-
----
-
-## 🎓 Education
-
-**B.Tech in Computer Engineering**  
-BVM Engineering College, Vallabh Vidhyanagar  
-🗓 2018 – 2022
-- CPI: **7.54 / 10**
-
----
-
-## ✨ Features of This Portfolio
-
-- Vertical animated **experience timeline**
-- Company logos with **auto color accents**
-- Scroll-reveal animations
-- KPI badges (performance & impact)
-- Dark mode support
-- Fully responsive design
-
----
-
-## 🛠 Setup & Run Locally
-
-### Prerequisites
-- Node.js (v16+ recommended)
-- npm
-
-### Steps
 ```bash
-# Clone repository
-git clone https://github.com/Om781/om-patel-portfolio.git
+npm install      # install dependencies
+npm run dev      # start dev server
+npm run build    # production build → dist/
+npm run preview  # preview the production build
+npm run deploy   # build + publish to gh-pages
+```
 
-# Go to project folder
-cd om-patel-portfolio
+> Requires Node.js 18+.
 
-# Install dependencies
-npm install
+---
 
-# Start development server
-npm start
+© 2026 Om Patel — designed & engineered from scratch.

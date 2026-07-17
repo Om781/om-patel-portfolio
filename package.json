@@ -1,59 +1,24 @@
 {
-  "homepage": "https://Om781.github.io/om-patel-portfolio",
   "name": "om-patel-portfolio",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "colorthief": "^2.3.0",
-    "framer-motion": "^11.15.0",
-    "jest-canvas-mock": "^2.3.1",
-    "lottie-react": "^2.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
-    "react-scripts": "^5.0.1",
-    "react-twitter-embed": "^4.0.4",
-    "sass": "^1.32.8"
-  },
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://Om781.github.io/om-patel-portfolio",
+  "description": "Personal portfolio of Om Patel — Backend & Identity Engineer.",
   "scripts": {
-    "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
-    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\"",
-    "generate-og-image": "node scripts/generate-og-image.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all",
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "framer-motion": "^11.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
-    "dotenv": "^8.2.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "gh-pages": "^6.3.0",
-    "prettier": "^2.3.1",
-    "puppeteer": "^24.34.0"
+    "vite": "^6.0.7"
   }
 }

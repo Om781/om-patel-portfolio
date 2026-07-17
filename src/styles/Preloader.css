@@ -1,0 +1,63 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+}
+.preloader-inner {
+  width: min(380px, 80vw);
+  text-align: center;
+}
+.preloader-hex {
+  color: var(--text);
+  margin: 0 auto 28px;
+  animation: hexpulse 1.5s ease-in-out infinite;
+}
+@keyframes hexpulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 transparent);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(0, 229, 160, 0.55));
+    transform: scale(1.06);
+  }
+}
+.preloader-status {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin-bottom: 22px;
+  min-height: 1.2em;
+}
+.preloader-caret {
+  color: var(--accent);
+}
+.preloader-blink {
+  color: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.preloader-bar {
+  height: 2px;
+  background: var(--hairline);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.preloader-bar-fill {
+  height: 100%;
+  background: var(--grad);
+  box-shadow: 0 0 12px var(--accent);
+  transition: width 0.12s linear;
+}
+.preloader-pct {
+  margin-top: 14px;
+  color: var(--text-mute);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+}

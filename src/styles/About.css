@@ -1,0 +1,94 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 5vw, 64px);
+  align-items: start;
+}
+.about-p {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.about-quote {
+  position: relative;
+  padding: 26px 28px 26px 30px;
+  margin-top: 10px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.about-quote-mark {
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 0;
+  margin-right: 6px;
+}
+.about-edu {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 28px;
+  padding: 20px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.about-edu-icon {
+  font-size: 1.6rem;
+}
+.about-edu-degree {
+  font-weight: 600;
+}
+.about-edu-school {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+.about-edu-detail {
+  font-size: 0.85rem;
+  margin-top: 7px;
+}
+.about-brings-title {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+}
+.brings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.bring-card {
+  padding: 20px;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+.bring-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-line);
+}
+.bring-icon {
+  font-size: 1.5rem;
+}
+.bring-title {
+  font-weight: 600;
+  margin-top: 12px;
+}
+.bring-text {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  line-height: 1.55;
+}
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 420px) {
+  .brings-grid {
+    grid-template-columns: 1fr;
+  }
+}

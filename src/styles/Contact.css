@@ -1,0 +1,67 @@
+.contact {
+  padding-bottom: clamp(60px, 9vw, 110px);
+}
+.contact-inner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(44px, 7vw, 90px) clamp(24px, 5vw, 60px);
+}
+.contact-glow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 229, 160, 0.16), transparent 62%);
+  pointer-events: none;
+}
+.contact-inner .kicker {
+  justify-content: center;
+}
+.contact-title {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 22px auto 0;
+  max-width: 16ch;
+}
+.contact-sub {
+  max-width: 52ch;
+  margin: 22px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.contact-cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+.contact-details a {
+  transition: color 0.25s ease;
+}
+.contact-details a:hover {
+  color: var(--accent);
+}
+.contact-sep {
+  color: var(--text-mute);
+}
+.contact-note {
+  margin-top: 22px;
+  font-size: 0.78rem;
+  color: var(--text-mute);
+  letter-spacing: 0.02em;
+}

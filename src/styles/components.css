@@ -1,0 +1,16 @@
+/* Shared primitives */
+
+.section-heading {
+  margin-bottom: clamp(38px, 6vw, 70px);
+}
+.section-heading-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.section-heading .h-section {
+  max-width: 22ch;
+}
