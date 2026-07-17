@@ -1,6 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
-import {about, education} from "../data/content";
+import {about, education, profile} from "../data/content";
 import "../styles/About.css";
 
 export default function About() {
@@ -13,6 +13,30 @@ export default function About() {
       />
       <div className="about-grid">
         <div className="about-story">
+          <Reveal>
+            <div className="id-card glass">
+              <div className="id-photo">
+                <img src={profile.photo} alt={profile.name} loading="lazy" />
+                <span className="id-scan" />
+                <span className="id-corner tl" />
+                <span className="id-corner tr" />
+                <span className="id-corner bl" />
+                <span className="id-corner br" />
+              </div>
+              <div className="id-info">
+                <div className="id-verified mono">
+                  <span className="id-check">✓</span> VERIFIED IDENTITY
+                </div>
+                <div className="id-name">{profile.name}</div>
+                <div className="id-role">{profile.role}</div>
+                <div className="id-meta mono">
+                  <span>◉ {profile.location}</span>
+                  <span className="id-hash">ID // {profile.fingerprintId}</span>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
           {about.story.map((p, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <p className="about-p">{p}</p>

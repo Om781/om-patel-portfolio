@@ -27,6 +27,7 @@ export const profile = {
   status: "Open to global roles & freelance projects",
   availability: "Full-time (open to relocation) · Freelance · Remote worldwide",
   resume: BASE + "resume.pdf",
+  photo: BASE + "om-patel.jpg",
   email: "reach.ompatel@gmail.com",
   phone: "+91 6354307757",
   fingerprintId: "0xF1NG3R-PR1NT-A7C9"
