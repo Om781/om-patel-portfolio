@@ -30,7 +30,7 @@ export const profile = {
   photo: BASE + "om-patel.jpg",
   email: "reach.ompatel@gmail.com",
   phone: "+91 6354307757",
-  fingerprintId: "0xF1NG3R-PR1NT-A7C9"
+  fingerprintId: "OP-SWE-2022"
 };
 
 export const socials = {
