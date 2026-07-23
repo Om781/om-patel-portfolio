@@ -1,5 +1,6 @@
 import Reveal from "../components/Reveal";
 import MagneticButton from "../components/MagneticButton";
+import LocalTime from "../components/LocalTime";
 import {IconMail, IconDownload} from "../components/Icons";
 import {profile} from "../data/content";
 import "../styles/Contact.css";
@@ -57,6 +58,12 @@ export default function Contact() {
         <Reveal delay={0.25}>
           <div className="contact-note mono">
             🔒 Reference letters from all employers available on request.
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.3}>
+          <div className="contact-localtime">
+            <LocalTime />
           </div>
         </Reveal>
       </div>

@@ -3,6 +3,7 @@ import DecryptText from "../components/DecryptText";
 import RotatingText from "../components/RotatingText";
 import MagneticButton from "../components/MagneticButton";
 import Fingerprint from "../components/Fingerprint";
+import CountUp from "../components/CountUp";
 import {
   IconGithub,
   IconLinkedin,
@@ -106,7 +107,9 @@ export default function Hero() {
           <div className="hero-stats">
             {stats.map((s, i) => (
               <Reveal className="hero-stat" key={s.label} delay={0.35 + i * 0.08}>
-                <div className="num text-grad">{s.value}</div>
+                <div className="num text-grad">
+                  <CountUp value={s.value} />
+                </div>
                 <div className="lbl">{s.label}</div>
               </Reveal>
             ))}

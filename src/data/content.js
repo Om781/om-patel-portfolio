@@ -295,6 +295,31 @@ export const education = {
   detail: "CPI 7.54 / 10 — strong foundation in software engineering & systems."
 };
 
+export const techMarquee = [
+  "Java",
+  "Spring Boot",
+  "Spring Security",
+  "Hibernate",
+  "Microservices",
+  "REST APIs",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "Jenkins",
+  "Apache Kafka",
+  "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Keycloak",
+  "OAuth2",
+  "JWT",
+  "Git",
+  "Maven",
+  "JUnit",
+  "Mockito",
+  "SonarQube"
+];
+
 export const nav = [
   {label: "About", href: "#about", id: "01"},
   {label: "Expertise", href: "#expertise", id: "02"},

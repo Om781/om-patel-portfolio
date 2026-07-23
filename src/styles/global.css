@@ -17,7 +17,7 @@
   /* ---- text ---- */
   --text: #e7edf4;
   --text-dim: #9aa8bc;
-  --text-mute: #5f6d80;
+  --text-mute: #7b899c;
 
   /* ---- accents ---- */
   --accent: #00e5a0; /* secure emerald */
@@ -91,6 +91,16 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* keyboard-only focus ring (accessibility) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 img {

@@ -2,9 +2,12 @@ import {useState, useEffect} from "react";
 import {AnimatePresence} from "framer-motion";
 import Background from "./components/Background";
 import Cursor from "./components/Cursor";
+import ScrollProgress from "./components/ScrollProgress";
+import ScrollTop from "./components/ScrollTop";
 import Preloader from "./sections/Preloader";
 import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
+import TechMarquee from "./sections/TechMarquee";
 import About from "./sections/About";
 import Expertise from "./sections/Expertise";
 import Experience from "./sections/Experience";
@@ -31,9 +34,11 @@ export default function App() {
 
       <Background />
       <Cursor />
+      <ScrollProgress />
       <Nav />
       <main>
         <Hero />
+        <TechMarquee />
         <About />
         <Expertise />
         <Experience />
@@ -42,6 +47,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollTop />
     </>
   );
 }

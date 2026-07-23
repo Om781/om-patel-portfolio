@@ -14,3 +14,86 @@
 .section-heading .h-section {
   max-width: 22ch;
 }
+
+/* scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad-tri);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 200;
+  box-shadow: 0 0 10px rgba(0, 229, 160, 0.5);
+}
+
+/* scroll-to-top button */
+.scroll-top {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--accent);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--hairline);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease),
+    border-color 0.25s ease, box-shadow 0.25s ease;
+  z-index: 90;
+}
+.scroll-top.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.scroll-top:hover {
+  border-color: var(--accent-line);
+  box-shadow: var(--glow-accent);
+}
+@media (max-width: 640px) {
+  .scroll-top {
+    bottom: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* local-time chip */
+.localtime {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+.localtime-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+.localtime-note {
+  color: var(--text-mute);
+}
+@media (max-width: 480px) {
+  .localtime-note {
+    display: none;
+  }
+}
